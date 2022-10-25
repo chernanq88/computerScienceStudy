@@ -1,11 +1,10 @@
 package trees;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Stack;
 
-public class TreeClass {
+
+public class PrintAllPaths {
 
     static class TreeNode{
         int value;
@@ -34,8 +33,6 @@ public class TreeClass {
 
         TreeNode seven= new TreeNode();
         seven.value=7;
-
-
 
         TreeNode two=new TreeNode();
         two.value=2;
