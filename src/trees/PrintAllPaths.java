@@ -14,11 +14,13 @@ public class PrintAllPaths {
     }
 
     /**
+     * Top down recursive
+     *
      *                  1
      *              2        3
      *          4     5   6    7
      *
-     * @param args
+     *
      */
     public static void main(String[] args) {
 
@@ -71,7 +73,12 @@ public class PrintAllPaths {
 
 
     /**
-        o(n)
+     * Time complexity
+     *   o(n)
+     *
+     * Space complexity
+     *  o(n) where n is the height of the tree
+     *
      */
     static void traverseTreeInorder(TreeNode root){
 
@@ -86,8 +93,12 @@ public class PrintAllPaths {
     }
 
     /**
-     * o(n)
-     * @param root
+     * Time complexity
+     *   o(n)
+     *
+     * Space complexity
+     *  o(n) where n is the height of the tree
+     *
      */
     static void traverseTreePreorder(TreeNode root){
 
@@ -102,8 +113,14 @@ public class PrintAllPaths {
     }
 
     /**
-     o(n)
+     * Time complexity
+     *   o(n)
+     *
+     * Space complexity
+     *  o(n) where n is the height of the tree
+     *
      */
+
     static void traverseTreePostOrder(TreeNode root){
 
         if(root.left!=null)

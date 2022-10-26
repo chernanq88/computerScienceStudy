@@ -1,12 +1,10 @@
 package trees;
 
-
 public class UnivalTree {
-
     static class TreeNode{
-        int value;
-        TreeNode left;
-        TreeNode right;
+        private int value;
+        private TreeNode left;
+        private TreeNode right;
 
     }
 
