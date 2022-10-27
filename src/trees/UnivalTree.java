@@ -8,8 +8,6 @@ public class UnivalTree {
 
     }
 
-
-
     public static void main(String[] args) {
 
         TreeNode four=new TreeNode();
@@ -70,28 +68,21 @@ public class UnivalTree {
             return true;
         }
 
-        if(node.left!=null) {
+        if(node.left!=null)
             left = areYouUnivalue(node.left);
-        }
 
-        if (node.right != null) {
+        if (node.right != null)
             right = areYouUnivalue(node.right);
-        }
 
-        if(!left || (node.left!=null && node.left.value!= node.value) ) {
-            return false;
-        }
 
-        if(!right || (node.right!=null && node.right.value!= node.value) ) {
+        if(!left || (node.left!=null && node.left.value!= node.value) )
             return false;
-        }
+
+        if(!right || (node.right!=null && node.right.value!= node.value) )
+            return false;
 
         univalCounter++;
         return true;
     }
-
-
-
-
 
 }

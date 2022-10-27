@@ -1,11 +1,9 @@
-package graphs;
+package graphs.directed;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
-public class DirectedGraphTraversalBFS {
+public class DirectedGraphTraversalDFS {
 
     /**
      * Node = Edge
@@ -23,6 +21,9 @@ public class DirectedGraphTraversalBFS {
 
 
     /**
+     *
+     *
+     *  Directed graph only requires simple DFS, no need to cache extra values of visited nodes
      *
      *              A ----> C
      *              |       |
@@ -53,31 +54,31 @@ public class DirectedGraphTraversalBFS {
         b.edges.addAll(List.of(d));
         f.edges.addAll(List.of(d));
 
-        System.out.println("BFS");
-        bfsTraverse(a);
+
+        // F is unreacheable if starts from first component
+        System.out.println("Traverse from A");
+        dfsTraverse(a);
 
         System.out.println();
 
-        bfsTraverse(f);
+        // A component is unreacheable
+        System.out.println("Traverse from F");
+        dfsTraverse(f);
+
     }
 
+    private static void dfsTraverse(Node a) {
 
-    private static void bfsTraverse(Node node){
+        System.out.println(a.identifier);
 
-        Queue<Node> queue=new LinkedList<>();
+        if (a.edges.isEmpty())
+            return;
 
-        queue.add(node);
-
-        while(queue.size()>0){
-            int totalElements=queue.size();
-            List<Node> nodes=new ArrayList<>();
-            while (totalElements>0){
-                Node n= queue.remove();
-                System.out.println(n.identifier);
-                queue.addAll(n.edges);
-                totalElements--;
-            }
+        for (Node node:a.edges){
+            dfsTraverse(node);
         }
+
     }
+
 
 }
