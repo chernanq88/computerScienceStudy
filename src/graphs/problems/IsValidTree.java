@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  *
- * Tree: Connected graph with no cicles
+ * Tree: Connected graph with no cycles
  *       with only one component
  *
  *

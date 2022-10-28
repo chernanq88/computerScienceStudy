@@ -5,15 +5,13 @@ import java.util.*;
 
 /**
  *
- * Tree: Connected graph with no cicles
- *       with only one component
- *
- *
+ * Tree: Is there a cycle in the graph?
+ * time complexity (V+E)
+ * space complexity (V)
  *
  *
  */
 public class CycleDetection {
-
 
     /**
      * Node = Edge
@@ -72,8 +70,6 @@ public class CycleDetection {
 
         List<Node> nodes=List.of(a,b,c,d,e,f,g,h);
 
-
-
         Boolean isThereACycle= isThereACycle(a, new HashMap<>(),null);
         System.out.println("Is there a cycle? " + isThereACycle);
 
@@ -94,11 +90,7 @@ public class CycleDetection {
         isThereACycle= isThereACycle(a, new HashMap<>(),null);
         System.out.println("Is there a cycle? " + isThereACycle);
 
-
-
     }
-
-
 
     /**
      *

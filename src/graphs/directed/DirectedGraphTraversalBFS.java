@@ -8,7 +8,7 @@ import java.util.Queue;
 public class DirectedGraphTraversalBFS {
 
     /**
-     * Node = Edge
+     * Node = Vertex
      */
     static class Node {
 
