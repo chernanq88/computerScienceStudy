@@ -26,7 +26,6 @@ public class Exercise1 {
         System.out.println(result2);
         //454*67-9-300*2*2
 
-            // 12
     }
 
     private static String dashInsertII(String x){
@@ -50,9 +49,8 @@ public class Exercise1 {
             }else if(!isEven(first) && !isEven(second)){
                 result.append(first);
                 result.append("-");
-            } else{
+            } else
                 result.append(first);
-            }
 
             ++pointer1;
             ++pointer2;
