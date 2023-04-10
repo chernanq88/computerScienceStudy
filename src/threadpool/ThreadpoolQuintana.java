@@ -5,6 +5,11 @@ import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
+/**
+ *
+ * Reference https://jenkov.com/tutorials/java-concurrency/thread-pools.html
+ */
+
 public class ThreadpoolQuintana {
 
     private BlockingQueue<Runnable> tasks = null;
