@@ -14,10 +14,11 @@ public class DuplicatesWithStream {
         List<Integer> result= list
                 .collect(Collectors.groupingBy(Integer::intValue)).entrySet()
                 .stream()
-                .filter(integerListEntry -> integerListEntry.getValue().size()>1).collect(Collectors.toList())
+                .filter(integerListEntry -> integerListEntry.getValue().size()>1)
+                .toList()
                 .stream().flatMap(integerListEntry -> integerListEntry.getValue().stream())
                 .distinct()
-                .collect(Collectors.toList());
+                .toList();
 
         System.out.println(result);
 
