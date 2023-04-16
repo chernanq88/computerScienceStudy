@@ -15,6 +15,8 @@ public class SortingAndCollecting {
                                               new Employee("Ana",34, 25000),
                                               new Employee("Liliana",56,10000));
 
+        employee.stream().mapToDouble(Employee::salary).sum();
+
         employee.stream().sorted(Comparator.comparing(Employee::age,Comparator.reverseOrder())).forEach(System.out::println);
 
         System.out.println("""
